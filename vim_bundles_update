@@ -1,10 +1,15 @@
 #!/bin/bash
 for directory in ~/.vim/bundle/*
 do
-	cd $directory
-	if [ -d .git ]
+  cd $directory
+  if [ -d .git ]
   then
-		git pull
-	fi
+    git pull
+  fi
+
+  if [ -d .hg ]
+  then
+    hg pull
+  fi
 done
 

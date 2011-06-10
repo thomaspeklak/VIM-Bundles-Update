@@ -1,0 +1,10 @@
+#!/bin/bash
+for directory in ~/.vim/bundle/*
+do
+	cd $directory
+	if [ -d .git ]
+  then
+		git pull
+	fi
+done
+
